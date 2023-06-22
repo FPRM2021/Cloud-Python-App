@@ -8,8 +8,8 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/execute', methods=['POST'])
-def execute():
+@app.route('/eval', methods=['POST'])
+def eval():
     code = request.form.get('code')
     
     try:

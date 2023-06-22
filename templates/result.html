@@ -2,11 +2,16 @@
 <html>
 <head>
     <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resultstyles.css') }}">
 </head>
 <body>
-    <h1>Execution Result</h1>
-    <p>{{ result }}</p>
-    <pre>{{ output }}</pre>
-    <a href="/">Go back</a>
+    <div class="container">
+        <h1>Execution Result</h1>
+        <div class="form-container">
+            <pre class="output">{{ output }}</pre>
+        </div>
+        <p>{{ result }}</p>
+        <button onclick="window.location.href = '/';">Go back</button>
+    </div>
 </body>
 </html>

@@ -2,13 +2,18 @@
 <html>
 <head>
     <title>Python Code Execution</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='indexstyles.css') }}">
+
 </head>
+
 <body>
-    <h1>Python Code Execution</h1>
-    <form action="/execute" method="POST">
-        <textarea name="code" rows="10" cols="50"></textarea>
-        <br>
-        <input type="submit" value="Execute">
-    </form>
+    <div class="container">
+        <h1>Python Code Execution</h1>
+        <form action="/eval" method="POST">
+            <textarea name="code" rows="10" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Execute">
+        </form>
+    </div>
 </body>
 </html>
