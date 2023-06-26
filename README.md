@@ -77,6 +77,7 @@ Además, los tiempos de conexión y procesamiento se encuentran dentro de un ran
 Estos resultados nos ayudan a evaluar la capacidad de nuestro proyecto para manejar una carga de solicitudes y nos permiten tomar decisiones sobre el escalado automático del endpoint en función del rendimiento obtenido durante la prueba de estrés.
 
 ## Instrucciones para Replicar el Proyecto
+
 -Descargar los archivos del repositorio.
 -Crear un clúster GKE en GCP.
 -Descargar e instalar Docker.
