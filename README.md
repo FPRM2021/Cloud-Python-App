@@ -77,14 +77,14 @@ Además, los tiempos de conexión y procesamiento se encuentran dentro de un ran
 Estos resultados nos ayudan a evaluar la capacidad de nuestro proyecto para manejar una carga de solicitudes y nos permiten tomar decisiones sobre el escalado automático del endpoint en función del rendimiento obtenido durante la prueba de estrés.
 
 ## Instrucciones para Replicar el Proyecto
-Descargar los archivos del repositorio.
-Crear un clúster GKE en GCP.
-Descargar e instalar Docker.
-Descargar la API de Google Cloud.
-Configurar Docker y conectarlo al clúster de GKE.
-Realizar las configuraciones necesarias en los archivos.
-Subir los archivos modificados a Docker.
-Realizar el despliegue del proyecto utilizando los comandos de Kubernetes.
+-Descargar los archivos del repositorio.
+-Crear un clúster GKE en GCP.
+-Descargar e instalar Docker.
+-Descargar la API de Google Cloud.
+-Configurar Docker y conectarlo al clúster de GKE.
+-Realizar las configuraciones necesarias en los archivos.
+-Subir los archivos modificados a Docker.
+-Realizar el despliegue del proyecto utilizando los comandos de Kubernetes.
 
 ## Repositorio
 En el siguiente enlace se puede acceder al repositorio que contiene los archivos necesarios para poder ejecutar el proyecto:
