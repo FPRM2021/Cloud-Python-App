@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-playground-server-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-playground-server
+  template:
+    metadata:
+      labels:
+        app: python-playground-server
+    spec:
+      containers:
+        - name: python-playground-server
+          image: gcr.io/caas-390503/python-playground-server@sha256:e42724192665f32a95e3861c35634086467ff6adfa44e0510ae59e602cf85786
+          ports:
+            - containerPort: 8080

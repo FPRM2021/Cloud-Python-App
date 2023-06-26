@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-playground-ui-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: python-playground-ui
+  template:
+    metadata:
+      labels:
+        app: python-playground-ui
+    spec:
+      containers:
+        - name: python-playground-ui
+          image: gcr.io/caas-390503/python-playground-ui@sha256:710bd9ea22342d667010724f180bfe0397c09a8b9f167317d89905b96409722b
+          ports:
+            - containerPort: 80
