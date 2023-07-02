@@ -24,29 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       })
       .then(function(data) {
-		  // Create a form element dynamically
-        var form = document.createElement("form");
-        form.action = "/result.html";
-        form.method = "GET";
+		console.log("Redirecting to result page");
 
-        // Create hidden input fields for the data values
-        var outputInput = document.createElement("input");
-        outputInput.type = "hidden";
-        outputInput.name = "output";
-        outputInput.value = data.output;
+        // Build the query string with the data values
+        var queryString = "?output=" + encodeURIComponent(data.output) + "&result=" + encodeURIComponent(data.result);
 
-        var resultInput = document.createElement("input");
-        resultInput.type = "hidden";
-        resultInput.name = "result";
-        resultInput.value = data.result;
-
-        // Append the input fields to the form
-        form.appendChild(outputInput);
-        form.appendChild(resultInput);
-
-        // Append the form to the document body and submit it
-        document.body.appendChild(form);
-        form.submit();
+        // Redirect to the result page with the query string
+        window.location.href = "/result.html" + queryString;
       })
       .catch(function(error) {
         console.error("Error: " + error);
