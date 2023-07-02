@@ -16,5 +16,17 @@
 
         <script src="script.js"></script>
     </div>
+	<script>
+        // Get the query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const outputValue = urlParams.get('output');
+        const resultValue = urlParams.get('result');
+
+        // Set the output and result values in the DOM
+        const outputElement = document.querySelector('.output');
+        const resultElement = document.querySelector('.result');
+        outputElement.textContent = outputValue;
+        resultElement.textContent = resultValue;
+    </script>
 </body>
 </html>
