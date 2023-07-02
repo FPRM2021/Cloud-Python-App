@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip-ui-service
+  annotations:
+    networking.gke.io/max-rate-per-endpoint: "10"
+spec:
+  type: ClusterIP
+  selector:
+    app: python-playground-ui
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80

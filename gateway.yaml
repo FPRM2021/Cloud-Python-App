@@ -1,0 +1,13 @@
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: Gateway
+metadata:
+  name: hpa-gateway
+spec:
+  gatewayClassName: gke-l7-rilb
+  addresses:
+  -  type: NamedAddress
+     value: gateway-internal-lb
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
