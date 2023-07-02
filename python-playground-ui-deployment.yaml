@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: python-playground-ui
-          image: gcr.io/caas-390503/python-playground-ui@sha256:e8b404fb4792bebd1cef04ffc65aa261835f4b670bbe0a487ba0a6f884fd79dc
+          image: gcr.io/caas-390503/python-playground-ui@sha256:ed25846706cb53a9eb6d64cb9a0437bfc914d108b090864f40b6379c3a028fc6
           ports:
             - containerPort: 80

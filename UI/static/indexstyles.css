@@ -1,4 +1,4 @@
-/* styles.css */
+/* indexstyles.css */
 
 /* Global styles */
 body {
@@ -20,10 +20,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.form-container {
-  margin-bottom: 20px;
-}
-
 textarea {
   width: 50%;
   height: 200px;
@@ -42,4 +38,19 @@ input[type="submit"] {
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.result-container {
+  margin-top: 20px;
+}
+
+.output,
+.result {
+  background-color: #282828;
+  color: #c5c8c6;
+  padding: 10px;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  white-space: pre-line;
+  overflow-x: auto;
 }
