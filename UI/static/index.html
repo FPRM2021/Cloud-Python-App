@@ -9,12 +9,18 @@
     <div class="container">
         <h1>Python Code Execution</h1>
         <form id="code-form">
-            <textarea name="code" rows="10" cols="50"></textarea>
+            <textarea id="code-input" name="code" rows="10" cols="50"></textarea>
             <br>
             <input type="submit" value="Execute">
         </form>
-
-        <script src="script.js"></script>
+        
+        <div class="result-container">
+            <h2>Execution Result</h2>
+            <pre class="output"></pre>
+            <pre class="result"></pre>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

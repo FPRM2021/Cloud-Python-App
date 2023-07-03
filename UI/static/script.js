@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   var codeForm = document.querySelector("#code-form");
+  var resultContainer = document.querySelector(".result-container");
+  var outputElement = resultContainer.querySelector(".output");
+  var resultElement = resultContainer.querySelector(".result");
 
   codeForm.addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     console.log("Form submitted");
 
-    var codeTextArea = document.querySelector("textarea[name='code']");
+    var codeTextArea = document.querySelector("#code-input");
     var code = codeTextArea.value;
 
     fetch("/eval", {
@@ -24,13 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       })
       .then(function(data) {
-		console.log("Redirecting to result page");
+        console.log("Updating result div");
 
-        // Build the query string with the data values
-        var queryString = "?output=" + encodeURIComponent(data.output) + "&result=" + encodeURIComponent(data.result);
-
-        // Redirect to the result page with the query string
-        window.location.href = "/result.html" + queryString;
+        // Update the result div with the fetched data
+        outputElement.textContent = data.output;
+        resultElement.textContent = data.result;
       })
       .catch(function(error) {
         console.error("Error: " + error);
