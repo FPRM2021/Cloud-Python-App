@@ -15,7 +15,7 @@ spec:
     object:
       describedObject:
         kind: Service
-        name: clusterip-ui-service
+        name: python-playground-ui-service
      
       metric:
         name: "autoscaling.googleapis.com|gclb-capacity-utilization"
